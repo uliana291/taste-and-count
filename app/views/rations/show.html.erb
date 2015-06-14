@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @ration.user_id %>
+</p>
+
+<p>
+  <strong>Calories:</strong>
+  <%= @ration.calories %>
+</p>
+
+<p>
+  <strong>Proteins:</strong>
+  <%= @ration.proteins %>
+</p>
+
+<p>
+  <strong>Fats:</strong>
+  <%= @ration.fats %>
+</p>
+
+<p>
+  <strong>Carbohydrates:</strong>
+  <%= @ration.carbohydrates %>
+</p>
+
+<%= link_to 'Edit', edit_ration_path(@ration) %> |
+<%= link_to 'Back', rations_path %>

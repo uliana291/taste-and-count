@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @body_parameter.user_id %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @body_parameter.weight %>
+</p>
+
+<p>
+  <strong>Height:</strong>
+  <%= @body_parameter.height %>
+</p>
+
+<%= link_to 'Edit', edit_body_parameter_path(@body_parameter) %> |
+<%= link_to 'Back', body_parameters_path %>

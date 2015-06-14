@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Rations</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Calories</th>
+      <th>Proteins</th>
+      <th>Fats</th>
+      <th>Carbohydrates</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @rations.each do |ration| %>
+      <tr>
+        <td><%= ration.user_id %></td>
+        <td><%= ration.calories %></td>
+        <td><%= ration.proteins %></td>
+        <td><%= ration.fats %></td>
+        <td><%= ration.carbohydrates %></td>
+        <td><%= link_to 'Show', ration %></td>
+        <td><%= link_to 'Edit', edit_ration_path(ration) %></td>
+        <td><%= link_to 'Destroy', ration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Ration', new_ration_path %>

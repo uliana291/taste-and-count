@@ -1,0 +1,29 @@
+<%= form_for(@body_parameter) do |f| %>
+  <% if @body_parameter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@body_parameter.errors.count, "error") %> prohibited this body_parameter from being saved:</h2>
+
+      <ul>
+      <% @body_parameter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user_id %><br>
+    <%= f.number_field :user_id %>
+  </div>
+  <div class="field">
+    <%= f.label :weight %><br>
+    <%= f.text_field :weight %>
+  </div>
+  <div class="field">
+    <%= f.label :height %><br>
+    <%= f.number_field :height %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
