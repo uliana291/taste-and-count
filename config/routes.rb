@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/index'
+
   resources :rations
   resources :body_parameters
   resources :body_parameters
